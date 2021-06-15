@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+
+    <script src="script.js " defer></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>FCC Heat Map</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">Global Surface Temperatures</h1>
+    <h4 id="description">Temperatures from 1753 - 2015 in ℃</h4>
+
+    <div id="tooltip"></div>
+    <br />
+
+    <svg id="canvas"></svg>
+
+    <svg id="legend">
+      <g>
+        <rect x="10" y="0" width="30" height="30" fill="LightBlue"></rect>
+        <text x="60" y="20" fill="white">Variance of -1 or less</text>
+      </g>
+      <g>
+        <rect x="10" y="40" width="30" height="30" fill="Yellow"></rect>
+        <text x="60" y="60" fill="white">On or Below Average</text>
+      </g>
+      <g>
+        <rect x="10" y="80" width="30" height="30" fill="Orange"></rect>
+        <text x="60" y="100" fill="white">Above Average</text>
+      </g>
+      <g>
+        <rect x="10" y="120" width="30" height="30" fill="Red"></rect>
+        <text x="60" y="140" fill="white">Variance of +1 or more</text>
+      </g>
+    </svg>
+  </body>
+</html>
