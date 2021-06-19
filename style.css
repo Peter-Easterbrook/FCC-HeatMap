@@ -27,14 +27,6 @@ li {
   font-family: 'Raleway', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 300;
-  color: #fff;
-}
-
 body {
   min-height: 100vh;
   display: flex;
@@ -84,9 +76,10 @@ h4 {
   margin-bottom: 0.6rem;
   background-color: #000;
   border: 1px solid #fff;
-  padding: 1rem 1.4rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 0.4rem;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  font-weight: 300;
 }
 svg {
   background-color: #000;
@@ -126,6 +119,11 @@ g {
   fill: #fff;
   text-transform: uppercase;
 }
+.info {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+}
 
 #legend {
   width: 16rem;
@@ -135,6 +133,17 @@ g {
   text-transform: uppercase;
   margin-top: 1rem;
   padding: 1rem;
+}
+#tooltip {
+  margin: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  visibility: hidden;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 .cell:hover {
   fill: black;
