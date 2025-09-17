@@ -27,9 +27,7 @@
       href="favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
-
-    <script src="script.js " defer></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
     <title>FCC Heat Map</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -39,6 +37,7 @@
     <h1 id="title">Global Surface Temperatures</h1>
     <h4 id="description">Temperatures from 1753 - 2015 in ℃</h4>
     <svg id="canvas"></svg>
+    <div id="tooltip"></div>
     <div class="info">
       <svg id="legend">
         <g>
@@ -58,9 +57,10 @@
           <text x="60" y="140" fill="white">Variance of +1 or more</text>
         </g>
       </svg>
-      <div id="tooltip"></div>
     </div>
+    <script src="d3.js"></script>
     <script src="thpace.min.js"></script>
+    <script src="script.js"></script>
     <script>
       const d3canvas = document.getElementById('thpace');
 

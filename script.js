@@ -106,7 +106,7 @@ let drawCells = () => {
     .attr('x', (item) => {
       return xScale(item['year']);
     })
-    .on('mouseover', (item) => {
+    .on('mouseover', (event, item) => {
       tooltip.transition().style('visibility', 'visible');
 
       let monthNames = [
@@ -129,15 +129,22 @@ let drawCells = () => {
           ' ' +
           monthNames[item['month'] - 1] +
           ' : ' +
-          item['variance']
+          (baseTemp + item['variance']).toFixed(3) +
+          '℃ (' +
+          item['variance'].toFixed(3) +
+          '℃)'
       );
 
       tooltip.attr('data-year', item['year']);
+      tooltip
+        .style('left', event.pageX - 120 + 'px')
+        .style('top', event.pageY + 30 + 'px');
     })
-    .on('mouseout', (item) => {
+    .on('mouseout', (event, item) => {
       tooltip.transition().style('visibility', 'hidden');
     });
 };
+
 let generateAxes = () => {
   let xAxis = d3.axisBottom(xScale).tickFormat(d3.format('d'));
 
